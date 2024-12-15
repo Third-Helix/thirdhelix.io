@@ -1,0 +1,27 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "brand-navy": "#1a1633",
+            "brand-blue": "#4361ee",
+            "brand-orange": "#ff6b6b",
+            "brand-purple": "#7209b7",
+          },
+          backgroundImage: {
+            "gradient-brand":
+              "linear-gradient(45deg, #4361ee, #ff6b6b, #7209b7)",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+</head>

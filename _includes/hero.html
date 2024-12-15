@@ -1,0 +1,20 @@
+<div id="home" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 noise-pattern"></div>
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-navy/50"
+  ></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <h1
+      class="text-5xl md:text-7xl font-bold mb-6 gradient-text !leading-normal"
+    >
+      {{ include.title }}
+    </h1>
+    <p class="text-xl text-white/80 mb-8 max-w-2xl">
+      {{ include.description }}
+    </p>
+    {% include button.html type="a" href="#contact" text=include.cta_text %}
+  </div>
+  <div
+    class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-brand-navy to-transparent"
+  ></div>
+</div>

@@ -1,0 +1,24 @@
+<div id="services" class="relative py-20">
+  <div class="absolute inset-0 bg-brand-blue/5"></div>
+  <div class="absolute inset-0 noise-pattern"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+      {{ include.title }}
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for service in site.data.services %}
+      <div
+        class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:border-brand-orange/50 transition duration-300 group"
+      >
+        <div
+          class="h-1 w-20 bg-gradient-brand mb-6 group-hover:w-full transition-all duration-300"
+        ></div>
+        <h3 class="text-xl font-semibold mb-4 text-white">
+          {{ service.title }}
+        </h3>
+        <p class="text-white/70">{{ service.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

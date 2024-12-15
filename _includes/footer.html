@@ -1,0 +1,57 @@
+<footer class="relative py-8">
+  <div
+    class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+  ></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white/60">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-4">{{ site.title }}</h3>
+        <p class="text-sm">{{ site.description }}</p>
+      </div>
+      <div>
+        <h3 class="text-white font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          {% for item in site.data.navigation %}
+          <li>
+            <a
+              href="{{ item.link }}"
+              class="text-sm hover:text-white transition duration-300"
+              >{{ item.name }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-bold mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          {% if site.contact.address %}
+          <li>{{ site.contact.address }}</li>
+          {% endif %} {% if site.contact.email %}
+          <li>
+            <a
+              href="mailto:{{ site.contact.email }}"
+              class="hover:text-white transition duration-300"
+              >{{ site.contact.email }}</a
+            >
+          </li>
+          {% endif %} {% if site.contact.phone %}
+          <li>
+            <a
+              href="tel:{{ site.contact.phone }}"
+              class="hover:text-white transition duration-300"
+              >{{ site.contact.phone }}</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/10">
+      <p>
+        &copy; {{ 'now' | date: "%Y" }} {{ site.title }}, Inc. All rights
+        reserved.
+      </p>
+    </div>
+  </div>
+</footer>
