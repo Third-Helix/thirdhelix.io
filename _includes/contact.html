@@ -1,18 +1,14 @@
-<div id="contact" class="relative py-20">
-  <div
-    class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-blue/10 to-transparent"
-  ></div>
-  <div class="absolute inset-0 noise-pattern"></div>
+<div id="contact" class="relative py-16 bg-brand-darkpurple">
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
-      {{ include.title | default: "Contact Us" }}
-    </h2>
     <div
       class="max-w-md mx-auto bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10"
     >
+        <h2 class="text-3xl font-bold text-center mb-8 text-brand-orange">
+          {{ include.title | default: "Contact Us" }}
+        </h2>
       <form class="space-y-6" action="{{ site.form_endpoint }}" id="contact-form" method="POST">
         <div class="relative">
-          <div class="h-1 w-full bg-gradient-brand opacity-20 mb-2"></div>
+          <div class="h-1 w-full bg-gradient-brand mb-8"></div>
           <input
             type="text"
             name="name"
@@ -45,7 +41,7 @@
       </form>
       <p id="contact-form-success" class="text-center mt-6 opacity-0 -translate-y-4 transition-all duration-300 hidden">
         <span class="text-2xl gradient-text font-bold">Thank you for your message!</span><br>
-        <span class="text-white/70">We'll get back to you soon.</span>
+        <span class="text-grey">We'll get back to you soon.</span>
       </p>
     </div>
   </div>

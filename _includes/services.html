@@ -1,8 +1,6 @@
-<div id="services" class="relative py-20">
-  <div class="absolute inset-0 bg-brand-blue/5"></div>
-  <div class="absolute inset-0 noise-pattern"></div>
+<div id="services" class="relative py-16 bg-brand-darkpurple">
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+    <h2 class="text-3xl font-bold text-center mb-12 text-brand-orange">
       {{ include.title }}
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -16,7 +14,7 @@
         <h3 class="text-xl font-semibold mb-4 text-white">
           {{ service.title }}
         </h3>
-        <p class="text-white/70">{{ service.description }}</p>
+        <p class="text-grey">{{ service.description }}</p>
       </div>
       {% endfor %}
     </div>
