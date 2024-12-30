@@ -1,5 +1,5 @@
 <nav
-  class="fixed w-full z-50 bg-brand-navy/90 backdrop-blur-sm border-b border-white/10"
+  class="fixed w-full z-50 bg-brand-darkpurple/90 backdrop-blur-sm border-b border-white/10"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
@@ -14,7 +14,7 @@
           {% for item in site.data.navigation %}
           <a
             href="{{ item.link }}"
-            class="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+            class="text-grey hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
             >{{ item.name }}</a
           >
           {% endfor %}
