@@ -12,13 +12,13 @@
         <h3 class="text-white font-bold mb-4">Quick Links</h3>
         <ul class="space-y-2">
           {% for item in site.data.navigation %}
-          <li>
-            <a
-              href="{{ item.link }}"
-              class="text-sm text-grey hover:text-white transition duration-300"
-              >{{ item.name }}</a
-            >
-          </li>
+            <li>
+              <a
+                href="{{ item.link }}"
+                class="text-sm text-grey hover:text-white transition duration-300"
+                >{{ item.name }}</a
+              >
+            </li>
           {% endfor %}
         </ul>
       </div>
@@ -26,23 +26,25 @@
         <h3 class="text-white font-bold mb-4">Contact</h3>
         <ul class="space-y-2 text-grey text-sm">
           {% if site.contact.address %}
-          <li>{{ site.contact.address }}</li>
-          {% endif %} {% if site.contact.email %}
-          <li>
-            <a
-              href="mailto:{{ site.contact.email }}"
-              class="text-grey hover:text-white transition duration-300"
-              >{{ site.contact.email }}</a
-            >
-          </li>
-          {% endif %} {% if site.contact.phone %}
-          <li>
-            <a
-              href="tel:{{ site.contact.phone }}"
-              class="text-grey hover:text-white transition duration-300"
-              >{{ site.contact.phone }}</a
-            >
-          </li>
+            <li>{{ site.contact.address }}</li>
+          {% endif %} 
+          {% if site.contact.email %}
+            <li>
+              <a
+                href="mailto:{{ site.contact.email }}"
+                class="text-grey hover:text-white transition duration-300"
+                >{{ site.contact.email }}</a
+              >
+            </li>
+          {% endif %} 
+          {% if site.contact.phone %}
+            <li>
+              <a
+                href="tel:{{ site.contact.phone }}"
+                class="text-grey hover:text-white transition duration-300"
+                >{{ site.contact.phone }}</a
+              >
+            </li>
           {% endif %}
         </ul>
       </div>
